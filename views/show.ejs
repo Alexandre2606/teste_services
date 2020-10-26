@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../templates/head.ejs') %>
+</head>
+
+<body>
+    <header>
+        <%- include('../templates/header.ejs') %>
+    </header>
+    <div class="d-flex justify-content-center container">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>Nome</td>
+                    <td>email</td>
+                    <td>telefone</td>
+                </tr>
+            </thead>
+            <tbody>
+                <% data.forEach(function(details) { %>
+                <tr>
+                    <td><%= details.nome %></td>
+                    <td><%= details.email %></td>
+                    <td><%= details.telefone %></td>
+                    <td><a href=" /edit/<%= details._id %>">Editar</a> - <a href="/delete/<%= details._id%>"
+                            onclick="return confirm('Você tem certeza que deseja deletar?');">Deletar</a></td>
+                </tr>
+                <% }) %>
+            </tbody>
+    </div>
+    <footer>
+        <%- include('../templates/footer.ejs') %>
+    </footer>
+</body>
+
+</html>

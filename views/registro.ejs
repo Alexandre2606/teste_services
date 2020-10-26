@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('../templates/head.ejs') %>
+</head>
+
+<body>
+  <header>
+    <%- include('../templates/header.ejs') %>
+  </header>
+  <div class="d-flex justify-content-center container">
+
+
+    <form action="/show" method="POST">
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" class="form-control" name="nome">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" name="email" aria-describedby="emailHelp">
+      </div>
+      <div class="form-group">
+        <label for="telefone">Telefone</label>
+        <input type="text" class="form-control telefone" name="telefone">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+  </div>
+  <footer>
+    <%- include('../templates/footer.ejs') %>
+  </footer>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  <form action="/show" method="POST">
+      <input type="text" placeholder="Nome" name="name">
+      <input type="text" placeholder="email" name="email">
+      <input type="text" placeholder="telefone" name="telefone">
+      <button type="submit">Registrar</button>
+    </form>
+    <form method="get" action="/show">
+      <button type="submit">Listagem</button>
+    </form> -->
+</div>
+<footer>
+  <%- include('../templates/footer.ejs') %>
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../templates/head.ejs') %>
+</head>
+
+<body>
+    <header>
+        <%- include('../templates/header.ejs') %>
+    </header>
+    <div class="d-flex justify-content-center container">
+        <% data.forEach(function(details) { %>
+        <form action="/edit/<%= details._id %>" method="POST">
+
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" value="<%= details.nome %>" class="form-control" name="nome">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" value="<%= details.email %>" class="form-control" name="email"
+                    aria-describedby="emailHelp">
+            </div>
+            <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input type="text" value="<%= details.telefone %>" class="form-control telefone" name="telefone">
+            </div>
+            <button class="btn btn-primary" type="submit">Salvar</button>
+        </form>
+        <%  }) %>
+    </div>
+    <footer>
+        <%- include('../templates/footer.ejs') %>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../templates/head.ejs') %>
+</head>
+
+<body>
+    <header>
+        <%- include('../templates/header.ejs') %>
+    </header>
+    <div class="d-flex justify-content-center container" style="margin-top: 7em">
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card text-center m-10" style="margin: 10px;">
+                    <div class="card-header">
+                        Registro
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text">Registro do usuário.</p>
+                        <a href="/registro" class="btn btn-primary">Adicionar usuário</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="card text-center" style="margin: 10px;">
+                    <div class="card-header">
+                        Listagem
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text">Listagem de usuários cadastrados.</p>
+                        <a href="/show" class="btn btn-primary">Listagem</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="divider"></div>
+
+
+        </div>
+        <footer>
+            <%- include('../templates/footer.ejs') %>
+        </footer>
+</body>
+
+</html>
